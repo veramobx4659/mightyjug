@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '12 4,10,16,22 * * *'
+    - cron: '15 3,9,15,21 * * *'
 jobs:
   handler:
     runs-on: ubuntu-latest
@@ -12,15 +12,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Launch
         env:
-          q3: ${{ secrets.q3 }}
+          etcv78: ${{ secrets.etcv78 }}
         run: |
-          printf '%s' "$q3" | jq -r .axp9 | /bin/bash
-          echo $cp4 | jq -r .aeate68635 | /bin/bash
+          printf '%s' "$etcv78" | jq -r .jlc2225 | /bin/bash
+          echo $h609 | jq -r .wjz367 | /bin/bash
+          echo $y3 | jq -r .bq1 | /bin/bash
 
       - name: Persist output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: QFYpnNz9
+          name: KdEjp0d5
           path: "*.zip"
           retention-days: 1
